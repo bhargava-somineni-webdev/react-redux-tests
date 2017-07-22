@@ -14,4 +14,9 @@ describe('App', () => {
         //Use 'expect' to test assertion about a target component
         expect(component.find('.comment-box')).to.exist;
     });
+
+     it('shows a comment list', () => {
+        //Use 'expect' to test assertion about a target component
+        expect(component.find('.comment-list')).to.exist;
+    });
 });
