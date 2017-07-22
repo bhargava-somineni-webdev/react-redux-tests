@@ -19,4 +19,18 @@ describe('CommentBox', () => {
     it('has the correct class', () => {
         expect(component).to.have.class('comment-box');
     });
+
+    describe('entering some text', () => {
+        beforeEach(() => {
+            component.find('textarea').simulate('change', 'new comment');
+        });
+
+        it('shows the text in that textarea', () => {
+            expect(component.find('textarea')).to.have.value('new comment');
+        });
+
+        it('when submitted clears the textarea', () => {
+            expect(component).to.have.class('comment-box');
+        });
+    })
 });
